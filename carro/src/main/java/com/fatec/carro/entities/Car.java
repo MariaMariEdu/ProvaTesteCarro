@@ -17,7 +17,7 @@ public class Car {
     private Long id; 
 
     private String make;
-    private Integer year;
+    private Integer ano;
     private String model;
     private String color;
     private String plate;
@@ -26,10 +26,10 @@ public class Car {
 
     public Car() {}
 
-    public Car(Long id, String make, Integer year, String model, String color, String plate, Integer doors) {
+    public Car(Long id, String make, Integer ano, String model, String color, String plate, Integer doors) {
         this.id = id;
         this.make = make;
-        this.year = year;
+        this.ano = ano;
         this.model = model;
         this.color = color;
         this.plate = plate;
