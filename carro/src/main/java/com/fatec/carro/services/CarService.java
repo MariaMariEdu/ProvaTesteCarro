@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.fatec.carro.entities.Car;
 import com.fatec.carro.repositories.CarRepository;
 
-
+import jakarta.persistence.EntityNotFoundException;
 @Service
 public class CarService {
     @Autowired
@@ -16,5 +16,9 @@ public class CarService {
 
     public List<Car> getCar(){
         return carRepository.findAll();
+    }
+
+    public Car getCarById(long id){
+        return carRepository.findById(id).orElseThrow(()-> new EntityNotFoundException());
     }
 }
